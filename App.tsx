@@ -18,11 +18,11 @@ const GAME_CONTENT: GameData = {
   description: "一場無法僅靠「找出兇手」就能解決的命案。\n\n《拯救之命 I Will Save You》是一款結合變格推理、多輪迴敘事與自由探索系統的劇情向獨立遊戲。玩家將在封閉空間中進行調查、懷疑、指認與選擇——然而，找出兇手並不代表故事結束。\n\n遊戲採用多輪迴設計。每一次「重新開始」都將可能改變規則與可見資訊。\n\n第一輪，你只能看見表層真相。多次結局之後，你將逐步解鎖新的能力與路徑。真相並非單一答案，而是一層層揭開動機與因果。\n\n玩家可在特定時間軸中自由行動，觀察角色動向、觸發事件與隱藏對話。探索不僅影響結局，也影響世界對玩家的回應。",
   videoId: "4LMOlHE-QhU",
   screenshots: [
-    "/boat_cabin.jpg",
-    "/playroom_puzzle.jpg",
-    "/screenshot0001.jpg",
-    "/screenshot0002.jpg",
-    "/screenshot0003.jpg"
+    "./boat_cabin.jpg",
+    "./playroom_puzzle.jpg",
+    "./screenshot0001.jpg",
+    "./screenshot0002.jpg",
+    "./screenshot0003.jpg"
   ]
 };
 
@@ -34,11 +34,11 @@ const App: React.FC = () => {
       {/* 導覽列 */}
       <header
         className="border-b border-hacker/30 sticky top-0 z-40 backdrop-blur-md bg-cover bg-center bg-no-repeat"
-        style={{ backgroundImage: 'url("/導覽列背景.jpg")' }}
+        style={{ backgroundImage: 'url("./導覽列背景.jpg")' }}
       >
         <div className="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between bg-tar/40">
           <div className="flex items-center">
-            <img src="/標題文字.png" alt="拯救之命" className="h-12 w-auto object-contain" />
+            <img src="./標題文字.png" alt="拯救之命" className="h-12 w-auto object-contain" />
           </div>
           <nav className="hidden md:flex space-x-8 text-xs font-bold tracking-widest text-hacker/70">
             <a href="#about" className="hover:text-hacker transition-colors">關於遊戲</a>
