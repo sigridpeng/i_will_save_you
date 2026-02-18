@@ -8,6 +8,10 @@ This contains everything you need to run your app locally.
 
 View your app in AI Studio: https://ai.studio/apps/drive/1PNrc0P5MAgLQ5F4T1LgB8iuFME2m7-Ss
 
+## Trailer
+
+[![《拯救之命 I Will Save You》預告片](https://img.youtube.com/vi/4LMOlHE-QhU/maxresdefault.jpg)](https://youtu.be/4LMOlHE-QhU)
+
 ## Run Locally
 
 **Prerequisites:**  Node.js

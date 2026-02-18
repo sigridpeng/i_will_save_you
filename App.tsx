@@ -11,19 +11,18 @@ const GAME_CONTENT: GameData = {
   publisher: "Classam Indie Works",
   releaseDate: "即將推出 / Coming Soon",
   tags: [
-    "變格推理", "多重結局", "輪迴敘事", 
-    "自由探索", "視覺小說", "獨立遊戲", 
+    "變格推理", "多重結局", "輪迴敘事",
+    "自由探索", "視覺小說", "獨立遊戲",
     "暴風雨山莊", "Meta 解謎"
   ],
   description: "一場無法僅靠「找出兇手」就能解決的命案。\n\n《拯救之命 I Will Save You》是一款結合變格推理、多輪迴敘事與自由探索系統的劇情向獨立遊戲。玩家將在封閉空間中進行調查、懷疑、指認與選擇——然而，找出兇手並不代表故事結束。\n\n遊戲採用多輪迴設計。每一次「重新開始」都將可能改變規則與可見資訊。\n\n第一輪，你只能看見表層真相。多次結局之後，你將逐步解鎖新的能力與路徑。真相並非單一答案，而是一層層揭開動機與因果。\n\n玩家可在特定時間軸中自由行動，觀察角色動向、觸發事件與隱藏對話。探索不僅影響結局，也影響世界對玩家的回應。",
-  videoId: "4LMOlHE-QhU", // 已更新為用戶提供的影片 ID
+  videoId: "4LMOlHE-QhU",
   screenshots: [
-    "https://picsum.photos/seed/mystery_1/800/450",
-    "https://picsum.photos/seed/detective_2/800/450",
-    "https://picsum.photos/seed/clock_3/800/450",
-    "https://picsum.photos/seed/mansion_4/800/450",
-    "https://picsum.photos/seed/ghost_5/800/450",
-    "https://picsum.photos/seed/truth_6/800/450"
+    "/boat_cabin.jpg",
+    "/playroom_puzzle.jpg",
+    "/screenshot0001.jpg",
+    "/screenshot0002.jpg",
+    "/screenshot0003.jpg"
   ]
 };
 
@@ -33,14 +32,13 @@ const App: React.FC = () => {
   return (
     <div className="min-h-screen selection:bg-hacker selection:text-tar">
       {/* 導覽列 */}
-      <header className="border-b border-hacker/30 bg-tar/95 sticky top-0 z-40 backdrop-blur-md">
-        <div className="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
-          <div className="flex items-center space-x-3">
-            <div className="w-10 h-10 border-2 border-hacker flex items-center justify-center font-black text-xl bg-hacker/10">S</div>
-            <div className="flex flex-col">
-              <span className="font-black tracking-widest text-sm">UPLINK_STATION</span>
-              <span className="text-[10px] text-hacker/50 font-mono">STATUS: ENCRYPTED_CONNECTION</span>
-            </div>
+      <header
+        className="border-b border-hacker/30 sticky top-0 z-40 backdrop-blur-md bg-cover bg-center bg-no-repeat"
+        style={{ backgroundImage: 'url("/導覽列背景.jpg")' }}
+      >
+        <div className="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between bg-tar/40">
+          <div className="flex items-center">
+            <img src="/標題文字.png" alt="拯救之命" className="h-12 w-auto object-contain" />
           </div>
           <nav className="hidden md:flex space-x-8 text-xs font-bold tracking-widest text-hacker/70">
             <a href="#about" className="hover:text-hacker transition-colors">關於遊戲</a>
@@ -67,33 +65,25 @@ const App: React.FC = () => {
           {/* 左側：影片展示 */}
           <div className="lg:col-span-8 aspect-video bg-tar-light border border-hacker/20 relative group overflow-hidden shadow-[0_0_50px_rgba(0,0,0,0.5)]">
             <iframe
-              className="w-full h-full opacity-90 group-hover:opacity-100 transition-opacity duration-500"
+              className="w-full h-full"
               src={`https://www.youtube.com/embed/${game.videoId}?autoplay=0&mute=1&rel=0`}
               title="遊戲預告片"
               frameBorder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
               allowFullScreen
             ></iframe>
-            <div className="absolute top-6 left-6 pointer-events-none">
-              <div className="flex items-center space-x-2 bg-tar/90 border border-hacker px-3 py-1 text-[10px] font-mono tracking-widest animate-pulse shadow-lg">
-                <span className="w-2 h-2 bg-red-500 rounded-full"></span>
-                <span>REC_MODE: 預覽頻道_01</span>
-              </div>
-            </div>
-            {/* 角飾 */}
-            <div className="absolute bottom-0 right-0 w-12 h-12 border-b-4 border-r-4 border-hacker/20"></div>
           </div>
 
           {/* 右側：遊戲資訊 */}
           <div className="lg:col-span-4 flex flex-col space-y-8 h-full">
             <div className="bg-tar-light/50 border border-hacker/30 p-8 space-y-8 flex-grow relative shadow-2xl">
               <div className="absolute top-0 right-0 p-2 text-[10px] text-hacker/20 font-mono">FILE_ID: SAVE_YOU_001</div>
-              
+
               <h3 className="text-sm font-black uppercase tracking-[0.3em] flex items-center text-hacker/40">
                 <Info className="w-4 h-4 mr-2" />
                 項目資訊
               </h3>
-              
+
               <div className="space-y-6 text-sm">
                 <div className="flex flex-col space-y-1">
                   <span className="text-[10px] text-hacker/40 font-mono">DEVELOPER</span>
@@ -123,7 +113,7 @@ const App: React.FC = () => {
                 </div>
               </div>
             </div>
-            
+
             {/* 快速按鈕 */}
             <button className="w-full bg-hacker text-tar font-black py-4 tracking-[0.5em] hover:brightness-125 transition-all shadow-[0_0_20px_rgba(0,255,65,0.3)] flex items-center justify-center space-x-3">
               <Play className="w-5 h-5 fill-current" />
@@ -144,7 +134,7 @@ const App: React.FC = () => {
                 關於《拯救之命》
               </h2>
             </div>
-            
+
             <div className="max-w-4xl space-y-8">
               {game.description.split('\n\n').map((para, i) => (
                 <p key={i} className="text-hacker/80 text-lg leading-relaxed font-sans font-medium indent-8">
@@ -152,7 +142,7 @@ const App: React.FC = () => {
                 </p>
               ))}
             </div>
-            
+
             {/* 裝飾線條 */}
             <div className="absolute bottom-0 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-hacker/30 to-transparent"></div>
           </div>
@@ -170,9 +160,9 @@ const App: React.FC = () => {
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {game.screenshots.map((src, i) => (
               <div key={i} className="aspect-video bg-tar-light border border-hacker/20 overflow-hidden group relative cursor-zoom-in">
-                <img 
-                  src={src} 
-                  alt={`遊戲截圖 ${i + 1}`} 
+                <img
+                  src={src}
+                  alt={`遊戲截圖 ${i + 1}`}
                   className="w-full h-full object-cover grayscale brightness-75 group-hover:grayscale-0 group-hover:brightness-110 transition-all duration-1000 transform group-hover:scale-110"
                 />
                 <div className="absolute inset-0 border-[10px] border-tar/0 group-hover:border-hacker/10 transition-all pointer-events-none"></div>
@@ -192,24 +182,25 @@ const App: React.FC = () => {
             </h2>
             <p className="text-hacker/50 font-mono text-sm tracking-[0.3em] uppercase">ACCESS_GRANTED: NO_RESTRICTIONS</p>
           </div>
-          
+
           <div className="relative group">
             <div className="absolute -inset-1 bg-hacker blur-2xl opacity-20 group-hover:opacity-60 transition-all duration-500 animate-pulse"></div>
-            <button className="relative px-20 py-6 bg-hacker text-tar font-black text-2xl tracking-[0.5em] hover:scale-105 active:scale-95 transition-all shadow-[0_0_50px_rgba(0,255,65,0.4)] flex items-center space-x-4">
-              <Play className="w-8 h-8 fill-current" />
-              <span>啟動遊戲</span>
+            <button
+              disabled
+              className="relative px-20 py-6 bg-hacker/20 text-hacker/40 font-black text-2xl tracking-[0.5em] cursor-not-allowed border border-hacker/20 flex items-center space-x-4"
+            >
+              <Play className="w-8 h-8 fill-current opacity-20" />
+              <span>即將推出</span>
             </button>
           </div>
 
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 w-full max-w-4xl pt-20">
-            {['STEAM', 'ITCH.IO', 'DISCORD', 'TWITTER'].map(platform => (
-              <div key={platform} className="flex flex-col items-center space-y-2 group cursor-pointer">
-                <div className="w-full h-[1px] bg-hacker/10 group-hover:bg-hacker/50 transition-colors"></div>
-                <span className="text-xs font-black tracking-widest text-hacker/40 group-hover:text-hacker transition-colors">
-                  {platform}
-                </span>
-              </div>
-            ))}
+          <div className="pt-20 text-center">
+            <a
+              href="mailto:sigridpeng.dev@gmail.com"
+              className="text-hacker/60 font-mono text-lg tracking-widest hover:text-hacker transition-colors border-b border-hacker/20 pb-1"
+            >
+              sigridpeng.dev@gmail.com
+            </a>
           </div>
         </section>
       </main>
