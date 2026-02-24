@@ -2,23 +2,39 @@
 <img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
 </div>
 
-# Run and deploy your AI Studio app
+# 《拯救之命 I Will Save You》
 
-This contains everything you need to run your app locally.
+真相不是答案，而是代價。
 
-View your app in AI Studio: https://ai.studio/apps/drive/1PNrc0P5MAgLQ5F4T1LgB8iuFME2m7-Ss
+《拯救之命 I Will Save You》是一款結合變格推理、多輪迴敘事與自由探索系統的劇情向獨立遊戲。玩家將在封閉空間中進行調查、懷疑、指認與選擇——然而，找出兇手並不代表故事結束。
+
+## 遊戲特色
+
+- **多輪迴設計**：每一次「重新開始」都將可能改變規則與可見資訊。
+- **變格推理**：真相並非單一答案，而是一層層揭開動機與因果。
+- **自由探索**：在特定時間軸中自由行動，觀察角色動向、觸發事件與隱藏對話。
 
 ## Trailer
 
 [![《拯救之命 I Will Save You》預告片](https://img.youtube.com/vi/4LMOlHE-QhU/maxresdefault.jpg)](https://youtu.be/4LMOlHE-QhU)
 
-## Run Locally
+## 本地運行 (Run Locally)
 
-**Prerequisites:**  Node.js
+**必要條件:** Node.js
 
+1. **安裝依賴:**
+   ```bash
+   npm install
+   ```
+2. **啟動開發伺服器:**
+   ```bash
+   npm run dev
+   ```
 
-1. Install dependencies:
-   `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
-   `npm run dev`
+## 聯繫開發者 (Contact)
+
+- Developer: Classam
+- Email: [sigridpeng.dev@gmail.com](mailto:sigridpeng.dev@gmail.com)
+
+---
+© 2026 CLASSAM INDIE WORKS. ALL RIGHTS RESERVED.

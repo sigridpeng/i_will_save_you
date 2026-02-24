@@ -122,8 +122,11 @@ const App: React.FC = () => {
             </div>
 
             {/* 快速按鈕 */}
-            <button className="w-full bg-hacker text-tar font-black py-4 tracking-[0.5em] hover:brightness-125 transition-all shadow-[0_0_20px_rgba(0,255,65,0.3)] flex items-center justify-center space-x-3">
-              <Play className="w-5 h-5 fill-current" />
+            <button
+              disabled
+              className="w-full bg-hacker/20 text-hacker/40 font-black py-4 tracking-[0.5em] cursor-not-allowed border border-hacker/20 flex items-center justify-center space-x-3 transition-all"
+            >
+              <Play className="w-5 h-5 fill-current opacity-20" />
               <span>立即預約</span>
             </button>
           </div>
